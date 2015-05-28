@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--title tab icon-->
+        <link rel="icon" type="image/jpg" href="images/hil3.jpg" />
+        <title>HAMY WEB - Home</title>
+
+
+        <link rel="prefetch"  type="text/css" href="style.css" />
+        <link rel="prefetch"  type="text/css" href="animation.css" />
+        
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet"  type="text/css" href="animation.css" />
+        
+        
+        <!--
+        <link rel="stylesheet" type="text/css" href="snazzy.css" />-->
+        
+
+        <!--LIGHTBOX-->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla%7CMontserrat">
+    	<link rel="stylesheet" href="lightbox/css/lightbox.css">
+    	<script src="lightbox/js/jquery-1.11.0.min.js"></script>
+	    <script src="lightbox/js/lightbox.min.js"></script>
+        
+        <!--title/center right change (called by menu)-->
+        <script type="text/javascript">
+            function disp(name, title,bgnum,animation)
+            {
+                var clearInfoElements = document.getElementsByClassName('info');
+                var i;
+                for (i = 0; i < clearInfoElements.length; i++) 
+                {
+                    clearInfoElements[i].style.display = "none";
+                }
+                document.getElementById(name).style.display="block";
+                document.getElementById("CRtitle").innerHTML = title;
+                document.getElementById("CRHeader").style.backgroundColor = bgnum;
+                
+                /* slide: up, down, left, right, expand, */
+                document.getElementById("centerRight").className = animation;
+                
+                
+            }
+        </script>
+        
+        <script>
+            var i=0;
+            var text= [
+            "Hello World!",
+            "Once I ate a blue mushroom",
+            "I had 99 problems, they were all bears",
+            "Turning Coffee into Code since 1842",
+            "My friends keep lighting my Minecraft house on fire",
+            "I built my fortress but my Dwarves refuse to pick up trash",
+            "sadlfijas;lgjelahf;aseihfalsijflseij",
+            "Snickel Fritz",
+            "Pfannkuchen sind Liebe",
+            "This is some text!",
+            "#CFF830",
+            "I wumbo, you wumbo, he-she-me wumbo. Wumboing, wumbology, the study of wumbo!",
+            "Meatball! Meatball! Spaghetti underneath, ravioli ravioli great barrier reef!",
+            "It’s not just any boulder...It’s a ROCK!",
+            "The inner machinations of my mind are an enigma",
+            "Is mayonnaise an instrument?",
+            "Once there was an ugly Barnacle. He was so ugly that everyone died. The End.",
+            ">:I"];
+            
+            function textScroll(){
+                $("#startText").text(text[i]);
+                $("#startText").fadeIn("3000",
+                function()
+                {
+                    setTimeout(function(){ $("#startText").fadeOut("3000"); }, 4000);
+                    i= Math.floor((Math.random() * text.length));
+                })
+            }
+            
+            window.onload = function()
+            {
+                setInterval(function()
+                {
+                    textScroll();    
+                },10000);
+            }; 
+        </script>
+        
+        
+
+        
+    </head>
+
+
+    <body>
+       
+        <div id="container">
+               
+            
+            <div id="head" class="headFall">
+            <!--Background http://www.gettyimages.com/detail/illustration/abstract-gears-background-royalty-free-illustration/469890171-->
+              
+
+                <img id="pageTitle" width="100%" height="90%" src="images/HHSharpBig.png" alt="pageTitle"/>
+               
+            </div><!--head-->
+            
+            <!--===================================-->
+            <!--CENTER-->
+            <!--===================================-->
+            <div id="center">
+                
+                <h2 id="CRHeader" >
+                        <div id="CRtitle" class="pullUp" >    
+                          
+                        </div>   
+                </h2>    
+                    
+                <!--===================================-->
+                <!--CENTER LEFT-->
+                <!--===================================-->
+                <div id="centerLeft" class="centerFall" >
+                    
+                    <div id="icon" class="centerFall">
+                        <a href="#" onClick="disp('start', '', '#01499D', 'fadeIn')">
+                        <img id="gear" class="gear" height="80%" width="80%" src="images/whiteGear1.png" alt="spinning gear"/>
+                        </a>
+                        
+                    </div> <!--Icon-->
+               
+                   
+                    <!--===================================-->
+                    <!--MENU-->
+                    <!--===================================-->
+                    <div>
+                    <ul id="menu">
+
+                        <li id="abo"><a href="#" onClick="disp('about', 'About Me', '#551A8B', 'slideUp')">About Me</a></li>
+                        <li id="edu"><a href="#" onClick="disp('education', 'Education', '#ffa500', 'slideDown')">Education</a></li>
+                        <li id="exp"><a href="#" onClick="disp('experience', 'Experience','#CFF830', 'slideLeft')">Experience</a></li>
+                        <li id="skil"><a href="#" onClick="disp('skills', 'Skills', '#24baba','slideRight')">Skills</a></li>
+                        <li id="cont"><a href="#" onClick="disp('contact','Contact Me','#ca27b6','expandUp')">Contact Me</a></li>
+                    </ul>
+                    </div>
+                    <div id="icon" class="centerFall">
+                    <img id="gear2" class="gear2" height="40%" width="40%" src="images/whiteGear2.png" alt="small spinning gear" />
+                    </div>
+                </div>
+                <!--CenterLeft END-->
+                    
+                <!--===================================-->
+                <!--CENTER RIGHT-->
+                <!--===================================-->    
+                <div id="centerRight" class="centerFall">
+                    
+                    
+                      
+                    <div id="start"  class="info">
+                         <div id="startText" align="center"></div>
+                          
+                    </div>  
+                   
+                    <!--===================================-->
+                    <!--ABOUT-->
+                    <!--===================================--> 
+                    <div id="about" class="info">
+			           
+			           <a class="example-image-link" href="images/hil3.jpg" data-lightbox="about-set" data-title="Click the right half of the image to move forward.">
+			                <img height="20%" width="20%" class="example-image" src="images/hil3.jpg" alt=""/>
+			           </a>
+			            <a class="example-image-link" href="images/2008Class_for_web.jpg" data-lightbox="about-set" data-title="Missouri University of Science and Technology Logo">    
+			                <img height="20%" width="20%" class="example-image" src="images/2008Class_for_web.jpg" alt=""/>
+			                </a>
+			           
+                        <h3 style="background-color:#24baba;"><b>Hello World!</b></h3>
+                        <p>
+                        My name is 
+                        <a href="http://lmgtfy.com/?q=Hilary+Hamlin">
+                        Hilary Hamlin</a>,
+                        I am a programmer and web developer.
+                        I enjoy working on 
+                        front end applications and user interfaces.  
+                        </p>
+                        <p> 
+                        I spend my spare time collecting comic books,elaborately posing action figures, crocheting, marathoning shows on Netflix, pampering my two spoiled rotten cats, Felicity and Chewbacca, planning and moderating table top adventures, and playing board games with friends.
+                        </p>
+                    </div>
+                    <!--about END-->
+                    
+                    
+                    
+                    <!--===================================-->
+                    <!--EDUCATION-->
+                    <!--===================================-->
+                    <div id="education" class="info">
+                        
+                        <div id="school">
+                            
+                            <a class="example-image-link" href="images/mst.png" data-lightbox="edu-set" data-title="Missouri University of Science and Technology Logo">
+                            <img src="images/mst.png" id="mstLogo" height="15%" width="15%" alt="Missouri University of Science and Technology Log" align="bottom"/>
+                            </a>
+                            
+                           
+			                
+			                <a class="example-image-link" href="images/panorama.jpg" data-lightbox="edu-set" data-title="Missouri University of Science and Technology Logo">
+			                <img height="20%" width="60%" class="example-image" src="images/panorama.jpg" alt=""/>
+			                </a>
+
+                        </div><!--school-->
+                        <hr>
+                        <div id="degrees">
+                        <ul>
+                            <h3 style="background-color:#24baba;">B.S. Psychology</h3>  
+                            <ul>
+                                May 2014
+                            </ul>
+                        </ul>
+                        <ul>
+                            <h3 style="background-color:#ca27b6;">B.S. Computer Science</h3>  
+                            <ul>
+                                July 2014                                 
+                            </ul>
+                        </ul>
+                        </div><!--degrees-->
+                    </div>
+                    <!--eduCATION END-->
+                    
+                    
+                    
+                    
+                    <!--===================================-->
+                    <!--EXPERIENCE-->
+                    <!--===================================-->
+                    <div id="experience" class="info">
+                         <h3 style="background-color:#CA27B6;">
+                             <a href="http://www.usgs.gov/" target="_blank">U.S. Geological Survey</a>
+                         </h3>
+                          August 2010 to Present
+                         <ul> 
+                             
+                             <h3 style="background-color:#551A8B;">NGTOC Application Developer</h3>
+                             
+                             <ul> 
+                                <h3 style="background-color:#FFA500;">USGS Product Tracking System (PTS)</h3>
+                                 <p> 
+                                    The 
+                                    <a href="http://pts.cr.usgs.gov/PTS/" target="_blank">
+                                    Product Tracking System (PTS) </a>
+                                    system was designed to help track the progress 
+                                    of mapping information products through the various stages of development from 
+                                    initial agreement and contracting through field collection and post-processing and
+                                    ultimately to release or publication of the data.
+                                </p>
+                                <p>
+                                    This application was built by a small team, primarily with Spring Roo using the Spring Tool Suite.  
+                                    I worked heavily on researching Spring Roo and after some initial development was assigned to 
+                                    displaying our database's information in a readable and user friendly way.
+                                </p>
+                                
+                                 
+                                 
+                                 <h3 class="node">JSON Earth</h3>
+                                 <p> about stuffffs</p>
+                                 <ul>
+                                     kml
+                                 google earth
+                                 json
+                                 apache servlets
+                                 </ul>
+                             </ul>
+                            
+                            <h3 id="child2">NGTOC IT Web Team</h3>
+                            <ul> 
+                                primary on:<br/>
+                                Geospatial Data Contracts 
+                                NGP internal 
+                                NHD
+                                ----nhd quiz gallery
+                                ----photo of the month
+                                
+                                National Map Liasons
+                                
+                                National Map USTopo
+                                National Map Historical
+                                --map sliders
+                                National Map Alaska
+                                National Map-standards and specifications
+                                Rolla Center Public
+                                
+                                moved national atlas
+                                created new page templates
+                          </ul>            
+                      </ul> 
+                    </div>
+                    <!--EXPERIENCE END-->
+                    
+                    
+                    
+                    
+                    <!--===================================-->
+                    <!--SKILLS-->
+                    <!--===================================-->
+                    <div id="skills" class="info">
+                        <h3>Languages</h3>
+                        C++, Java, Html, XML, KML, Python, Groovy, Javascript, PHP, CSS
+                        
+                        <p></p>    
+                        <h3>Editors & IDEs</h3>
+                            Eclipse, NetBeans, Notepad++, ninja-IDE, JPico, SpringRoo Tool Suite, QT Creator
+                            
+                        <p></p>
+                        <h3>Databases</h3>
+                            SQL, PostGres, Glassfish, Oracle
+                    </div>
+                    <!--skills END-->
+                    
+                    
+                    
+                    
+                   
+                    <!--===================================-->
+                    <!--CONTACT-->
+                    <!--===================================-->
+                    <div id="contact" class="info">
+                    
+                             <div class="toggleVis">
+                                <img  class="PNGicon" src="images/icon/email109.png" alt="" />
+                                <div id="email" class="PNGtext"> <a href="mailto:hsh8r8@mst.edu?Subject=HamyJams%20Website%20Email%20Message">hsh8r8@mst.edu</a> </div>     
+                            </div>
+                            
+                            <div style="clear:both"></div>
+                        
+                        <div class="toggleVis"> 
+                            <img  class="PNGicon" src="images/icon/phone382.png" alt="" />
+                            <div id="phone" class="PNGtext" ><a href="tel:15732809680">(573) 280-9680</a></div>
+                        </div>
+                        
+                       <div style="clear:both"></div>
+                        
+                        <div class="toggleVis">
+                            <img  class="PNGicon" src="images/icon/briefcase56.png" alt="" />
+                            <a id="linkedin" href="https://www.linkedin.com/pub/hilary-hamlin/90/289/56a" class="PNGtext" target="_blank">
+                                https://www.linkedin.com
+                            </a>
+                        </div><!--TOGGLE VIS END-->
+                        <div style="clear:both"></div>
+                        <div id="iconCredit" ><!--icon credit-->
+                           Icons made by
+                           <a href="http://icon-works.com" title="Icon Works">
+                           Icon Works
+                           </a> from
+                           <a href="http://www.flaticon.com" title="Flaticon">
+                           www.flaticon.com
+                           </a>
+                           is licensed by
+                           <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">
+                           CC BY 3.0
+                           </a>
+                       </div>
+                       <!--icon credit-->
+                    </div>
+                    <!--contact END-->
+  
+                </div>
+                <!--CenterRight END-->
+                
+            </div>
+            <!--Center END-->
+            
+     
+        
+            
+        </div>
+        <!--container-->
+
+    </body>
+
+</html>

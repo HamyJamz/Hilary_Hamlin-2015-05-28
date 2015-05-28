@@ -1,0 +1,31 @@
+{
+  "htmlFiles": [
+    {
+      "fileId": "0BwupDGxs1XIoZERoR0ZhUW9RbE0",
+      "contentType": "text/html",
+      "name": "index.html",
+      "path": "0BwupDGxs1XIoNTB5WTA5WWhhUkE"
+    }
+  ],
+  "cssFiles": [
+    {
+      "fileId": "0BwupDGxs1XIoazVqU0VDQjhOUjA",
+      "contentType": "text/css",
+      "name": "style.css",
+      "path": "0BwupDGxs1XIoNTB5WTA5WWhhUkE"
+    },
+    {
+      "fileId": "0BwupDGxs1XIoSHkxWmw0cjFRTms",
+      "contentType": "text/css",
+      "name": "snazzy.css",
+      "path": "0BwupDGxs1XIoNTB5WTA5WWhhUkE"
+    },
+    {
+      "fileId": "0BwupDGxs1XIoaEszcDZhUHU1ajA",
+      "contentType": "text/css",
+      "name": "animations.css",
+      "path": "0BwupDGxs1XIoNTB5WTA5WWhhUkE/"
+    }
+  ],
+  "javascriptFiles": []
+}
